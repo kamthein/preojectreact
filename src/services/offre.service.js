@@ -14,7 +14,7 @@ class OffreDataService {
     }
 
     getTel(id) {
-        return http.get(`/offres/tel/${id}`);
+        return http.get(`offres/tel/${id}`);
     }
 
     create(data) {

@@ -95,13 +95,12 @@ export default class Offre extends Component {
             .then(response => {
                 console.log(response.data);
                 this.setState({
-                    message: "The offre was updated successfully!"
+                    message: "L'offre a bien été modifiée."
                 });
             })
             .catch(e => {
                 console.log(e);
             });
-
     }
 
     deleteOffre() {
@@ -178,14 +177,14 @@ export default class Offre extends Component {
 
                         <button
                             type="submit"
-                            className="badge badge-success"
+                            className="badge badge-success mr-2"
                             onClick={this.updateOffre}
                         >
                             Modifier
                         </button>
                         <p>{this.state.message}</p>
                         <br/>
-                        <Link to={"/mod"} className="nav-link">
+                        <Link to={"/mod"} className="badge badge-default mr-2">
                             Retour au LambdaBoard
                         </Link>
                     </div>

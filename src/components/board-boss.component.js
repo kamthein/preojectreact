@@ -180,7 +180,7 @@ export default class AddOffre extends Component {
                             <br/>
                             <h4>Mes offres</h4>
                             <div className="list row">
-                                <div className="col-md-6">
+                                <div className="col-md-12">
                                     <ul className="list-group">
                                         {offres &&
                                         offres.map((offre, index) => (
@@ -197,7 +197,8 @@ export default class AddOffre extends Component {
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="col-md-6">
+
+                                <div className="col-md-12">
                                     {currentOffre ? (
                                         <div>
                                             <br/>
@@ -222,14 +223,14 @@ export default class AddOffre extends Component {
                                             </div>
                                             <Link
                                                 to={"/offres/" + currentOffre.id}
-                                                className="badge badge-warning"
+                                                className="badge badge-warning  mr-2"
                                             >
                                                 Edit
                                             </Link>
                                         </div>
                                     ) : (
                                         <div>
-                                            <br />
+                                            <br/>
                                             <p>Merci de cliquer sur une offre...</p>
                                         </div>
                                     )}

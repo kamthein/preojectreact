@@ -13,6 +13,7 @@ import BoardLambda from "./components/board-lambda.component";
 import BoardBoss from "./components/board-boss.component";
 import BoardAdmin from "./components/board-admin.component";
 import Offre from "./components/offre.component";
+import Tel from "./components/tel-display.component";
 
 class App extends Component {
   constructor(props) {
@@ -120,6 +121,7 @@ class App extends Component {
               <Route path="/mod" component={BoardBoss} />
               <Route path="/admin" component={BoardAdmin} />
               <Route path="/offres/:id" component={Offre} />
+              <Route path="/tel/:id" component={Tel} />
             </Switch>
           </div>
         </div>

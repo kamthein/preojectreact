@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import OffreDataService from "../services/offre.service";
-import { Link } from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
+import Tel from "./tel-display.component";
 
 export default class OffresList extends Component {
     constructor(props) {
@@ -151,6 +152,9 @@ export default class OffresList extends Component {
                         <div>
                             <br/>
                             <h4>Détails de l'offre</h4>
+                            <Link to={"tel/" + currentOffre.userId } className="badge badge-info">
+                            Téléphone du Boss
+                        </Link>
                             <div>
                                 <label>
                                     <strong>Mots clés:</strong>
@@ -169,15 +173,6 @@ export default class OffresList extends Component {
                                 </label>{" "}
                                 {currentOffre.stock ? "En stock" : "Expiré"}
                             </div>
-                            <button
-                                id="myLink"
-                                type="submit"
-                                className="badge badge-success"
-                                //onClick={this.displayTel(currentOffre.id)}
-                            >
-                                Contact Boss
-                            </button>
-
                         </div>
                     ) : (
                         <div>
@@ -186,7 +181,11 @@ export default class OffresList extends Component {
                         </div>
                     )}
                 </div>
+
             </div>
+
+
+
         );
     }
 }
