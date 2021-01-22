@@ -52,6 +52,7 @@ export default class AddOffre extends Component {
             description: this.state.description,
             stock: true,
             userId: AuthService.getCurrentUser().id,
+            file: this.state.file,
         };
         console.log(data);
         OffreDataService.create(data)
@@ -62,6 +63,7 @@ export default class AddOffre extends Component {
                     description: response.data.description,
                     stock: true,
                     userId: AuthService.getCurrentUser().id,
+                    file: response.data.file,
 
                     submitted: true
                 });
@@ -169,6 +171,15 @@ export default class AddOffre extends Component {
                                 name="description"
                             />
                         </div>
+                        <div className="form-group">
+                            <input
+                                type="file"
+                                name="file"
+                                id="input-files"
+                                className="form-control-file border"
+                            />
+                        </div>
+
 
                         <button onClick={this.saveOffre} className="btn btn-success">
                             Créer une offre
@@ -242,7 +253,14 @@ export default class AddOffre extends Component {
 
                     </div>
                 )}
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                <script>
+
+                </script>
             </div>
+
         );
     }
 }
+
